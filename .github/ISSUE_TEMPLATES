@@ -1,0 +1,11 @@
+As a DevOps engineer  
+I need to automatically build Docker images on code changes
+So that I can deploy updates frequently and efficiently
+
+- The app code is in a GitHub repository
+- Dockerfile is in the repo to build an image
+- Using GitHub Actions workflows
+
+Given the app code is in a GitHub repo with a Dockerfile
+When code is pushed to the main branch  
+Then a GitHub action builds a new Docker image and pushes it to Docker Hub

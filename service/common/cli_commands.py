@@ -19,3 +19,4 @@ def db_create():
     db.drop_all()
     db.create_all()
     db.session.commit()
+    

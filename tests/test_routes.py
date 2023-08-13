@@ -170,11 +170,7 @@ class TestAccountService(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         updated_account = resp.get_json()
         self.assertEqual(updated_account["name"], "Something Known")
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> c0838579d5a3c2ffc94306b3145d4fb6e92b106e
+        
     def test_delete_account(self):
         """It should Delete an Account"""
         account = self._create_accounts(1)[0]
@@ -184,7 +180,6 @@ class TestAccountService(TestCase):
     def test_method_not_allowed(self):
         """It should not allow an illegal method call"""
         resp = self.client.delete(BASE_URL)
-<<<<<<< HEAD
         self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
     def test_security_headers(self):
@@ -206,6 +201,3 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         # Check for the CORS header
         self.assertEqual(response.headers.get('Access-Control-Allow-Origin'), '*')
-=======
-        self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
->>>>>>> c0838579d5a3c2ffc94306b3145d4fb6e92b106e
